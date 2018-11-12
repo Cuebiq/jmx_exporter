@@ -36,7 +36,7 @@ class JmxScraper {
     private static final Logger logger = Logger.getLogger(JmxScraper.class.getName());
 
 
-    public static interface MBeanReceiver {
+    public interface MBeanReceiver {
         void recordBean(
             String domain,
             LinkedHashMap<String, String> beanProperties,
