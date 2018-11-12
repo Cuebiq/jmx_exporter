@@ -4,7 +4,7 @@
 
   <groupId>io.prometheus.jmx</groupId>
   <artifactId>parent</artifactId>
-  <version>0.3.2-SNAPSHOT</version>
+  <version>0.3.2-RELEASE-SNAPSHOT</version>
   <description>
     See https://github.com/prometheus/jmx_exporter/blob/master/README.md
   </description>
@@ -22,18 +22,16 @@
     <module>jmx_prometheus_javaagent</module>
   </modules>
 
-  <distributionManagement>
-      <snapshotRepository>
-          <id>ossrh</id>
-          <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-      </snapshotRepository>
-      <repository>
-          <id>ossrh</id>
-          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-      </repository>
-  </distributionManagement>
+    <distributionManagement>
+        <repository>
+            <id>cuebiq-maven-s3-release-repo</id>
+            <name>AWS Release Repository</name>
+            <url>s3://private-repository.cuebiq.com/releases</url>
+        </repository>
+    </distributionManagement>
 
-  <licenses>
+
+    <licenses>
       <license>
           <name>The Apache Software License, Version 2.0</name>
           <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
